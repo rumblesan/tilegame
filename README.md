@@ -3,11 +3,6 @@
 A tiny game engine for making tiled games on a canvas
 
 
-## Description
-
-
-
-
 ## Contact
 
 Drop me an email at guy@rumblesan.com
@@ -15,5 +10,7 @@ Drop me an email at guy@rumblesan.com
 
 ## License
 
-BSD License.
+All code under BSD License.
+
+The *terrain.png* sprite sheet by [Michele "Buch" Bucelli](https://opengameart.org/users/buch)
 

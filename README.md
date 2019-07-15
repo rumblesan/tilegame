@@ -13,4 +13,5 @@ Drop me an email at guy@rumblesan.com
 All code under BSD License.
 
 The *terrain.png* sprite sheet by [Michele "Buch" Bucelli](https://opengameart.org/users/buch)
+The *character.png* sprite sheet by [Elthen](https://www.patreon.com/elthen)
 

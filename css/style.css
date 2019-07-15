@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  min-height: 40vh;
+  margin: 3em;
+}
+
+canvas {
+  width: 640px;
+  height: 480px;
+}

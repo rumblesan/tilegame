@@ -42,7 +42,6 @@ var config = {
   imageMaps: [
     { name: 'forest', tilemap: forestTilemap, imageName: 'terrain', type: 'full', tilesX: 20, tilesY: 15},
     { name: 'tree', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4},
-    { name: 'coins', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4},
   ],
 };
 

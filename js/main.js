@@ -4,8 +4,16 @@ var state = {
   character: {
     xPos: 100,
     yPos: 100,
+    width: 32,
+    height: 32,
     direction: 'right',
     speed: 4,
+  },
+  coins: {
+    xPos: 100,
+    yPos: 200,
+    width: 32,
+    height: 32,
   },
 };
 
@@ -18,16 +26,24 @@ function runGame(game) {
     game.drawImage("forest", 0, 0);
 
     game.drawImage("tree", 400, 200);
+
     var characterTile = 0;
     if (state.character.direction === 'left') {
-      characterTile = 3;
+      characterTile = 1;
     }
-
     game.drawTileToPos("character", characterTile, state.character.xPos, state.character.yPos);
 
     game.drawTileToPos("terrain", 69, 300, 240);
 
-    game.drawTileToPos("treasure", 4, 100, 240);
+    game.drawTileToPos("treasure", 4, state.coins.xPos, state.coins.yPos);
+
+    if (game.areTouching(
+      state.character.xPos, state.character.yPos, 32, 32,
+      state.coins.xPos, state.coins.yPos, 32, 32
+    )) {
+      console.log('touching');
+    }
+
     setTimeout(function () {
       requestAnimationFrame(animate)
     }, 30);

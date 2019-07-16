@@ -21,7 +21,6 @@ function addImageToLibrary(imageLibrary, image, imageData) {
   imageLibrary[imageData.name] = {
     image: image,
     type: imageData.type,
-    scale: imageData.scale,
   }
   if (imageData.type === 'tileset') {
     imageLibrary[imageData.name].tilesize = imageData.tilesize;
@@ -104,8 +103,8 @@ function StartGameEngine(canvas, config, gameLoop) {
     var sourceTilesize = imageData.tilesize;
     var xTile = (tileNumber % imageData.tilesX) * sourceTilesize;
     var yTile = Math.floor(tileNumber / imageData.tilesX) * sourceTilesize;
-    var width = game.tilesize * imageData.scale;
-    var height = game.tilesize * imageData.scale;
+    var width = game.tilesize;
+    var height = game.tilesize;
     game.ctx.drawImage(imageData.image,
       xTile, yTile, sourceTilesize, sourceTilesize,
       xPos, yPos, width, height,

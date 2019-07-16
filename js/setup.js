@@ -35,14 +35,14 @@ var config = {
     tilesize: 32,
   },
   images: [
-    { name: 'character', url: 'images/character.png', type: 'tileset', tilesize: 32, tilesX: 13, tilesY:16, scale: 2 },
-    { name: 'terrain', url: 'images/terrain.png', type: 'tileset', tilesize: 16, tilesX: 24, tilesY:12, scale: 1 },
-    { name: 'treasure', url: 'images/treasure.png', type: 'tileset', tilesize: 16, tilesX: 4, tilesY:4, scale: 1 },
+    { name: 'character', url: 'images/character.png', type: 'tileset', tilesize: 20, tilesX: 13, tilesY:16},
+    { name: 'terrain', url: 'images/terrain.png', type: 'tileset', tilesize: 16, tilesX: 24, tilesY:12},
+    { name: 'treasure', url: 'images/treasure.png', type: 'tileset', tilesize: 16, tilesX: 4, tilesY:4},
   ],
   imageMaps: [
-    { name: 'forest', tilemap: forestTilemap, imageName: 'terrain', type: 'full', tilesX: 20, tilesY: 15, scale: 1 },
-    { name: 'tree', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4, scale: 1 },
-    { name: 'coins', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4, scale: 1 },
+    { name: 'forest', tilemap: forestTilemap, imageName: 'terrain', type: 'full', tilesX: 20, tilesY: 15},
+    { name: 'tree', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4},
+    { name: 'coins', tilemap: treeTilemap, imageName: 'terrain', type: 'full', tilesX: 4, tilesY: 4},
   ],
 };
 

@@ -37,7 +37,7 @@ function runGame(game) {
 
     game.drawTileToPos("treasure", 4, state.coins.xPos, state.coins.yPos);
 
-    if (game.areTouching(
+    if (game.colided(
       state.character.xPos, state.character.yPos, 32, 32,
       state.coins.xPos, state.coins.yPos, 32, 32
     )) {

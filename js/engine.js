@@ -142,7 +142,7 @@ function StartGameEngine(canvas, config, gameLoop) {
     }
   };
 
-  game.areTouching = function (
+  game.colided = function (
     thing1X1, thing1Y1, thing1Width, thing1Height,
     thing2X1, thing2Y1, thing2Width, thing2Height
   ) {

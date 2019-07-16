@@ -74,6 +74,7 @@ function StartGameEngine(canvas, config, gameLoop) {
     width: config.dimensions.tilesX * config.dimensions.tilesize,
     height: config.dimensions.tilesY * config.dimensions.tilesize,
     images: {},
+    debug: false,
   };
 
   // Size the canvas
@@ -103,10 +104,15 @@ function StartGameEngine(canvas, config, gameLoop) {
     var sourceTilesize = imageData.tilesize;
     var xTile = (tileNumber % imageData.tilesX) * sourceTilesize;
     var yTile = Math.floor(tileNumber / imageData.tilesX) * sourceTilesize;
+    var width = game.tilesize * imageData.scale;
+    var height = game.tilesize * imageData.scale;
     game.ctx.drawImage(imageData.image,
       xTile, yTile, sourceTilesize, sourceTilesize,
-      xPos, yPos, game.tilesize * imageData.scale, game.tilesize * imageData.scale,
+      xPos, yPos, width, height,
     );
+    if (game.debug) {
+      game.ctx.strokeRect(xPos, yPos, width, height);
+    }
   };
 
   game.drawTileToGrid = function (imageName, tileNumber, xTile, yTile) {
@@ -124,6 +130,9 @@ function StartGameEngine(canvas, config, gameLoop) {
       xPos, yPos, sourceTilesize, sourceTilesize,
       xTile * game.tilesize, yTile * game.tilesize, game.tilesize, game.tilesize,
     );
+    if (game.debug) {
+      game.ctx.strokeRect(xTile * game.tilesize, yTile * game.tilesize, game.tilesize, game.tilesize);
+    }
   };
 
   game.drawTileMap = function (imageName, tilemap, tilesX, tilesY) {

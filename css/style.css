@@ -8,8 +8,9 @@ body {
 }
 
 main {
-  min-height: 40vh;
-  margin: 3em;
+  margin: 1em;
+  width: 100%;
+  text-align: center;
 }
 
 canvas {

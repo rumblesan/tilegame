@@ -142,6 +142,18 @@ function StartGameEngine(canvas, config, gameLoop) {
     }
   };
 
+  game.areTouching = function (
+    thing1X1, thing1Y1, thing1Width, thing1Height,
+    thing2X1, thing2Y1, thing2Width, thing2Height
+  ) {
+    var thing1X2 = thing1X1 + thing1Width;
+    var thing1Y2 = thing1Y1 + thing1Height;
+    var thing2X2 = thing2X1 + thing2Width;
+    var thing2Y2 = thing2Y1 + thing2Height;
+    return (thing1X2 >= thing2X1 && thing1X1 <= thing2X2) &&
+           (thing1Y2 >= thing2Y1 && thing1Y1 <= thing2Y2)
+  }
+
   // Start loading the images
   loadImages(config.images, game.images, function () {
     buildImageMaps(config.imageMaps, game);

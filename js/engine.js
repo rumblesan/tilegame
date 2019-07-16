@@ -56,7 +56,7 @@ function buildImageMaps(imageMaps, game) {
     var height = mapData.tilesY * game.tilesize;
     var osCanvas = offscreenCanvas(game, width, height);
     game.ctx = osCanvas.ctx;
-    game.drawTileMap(mapData.imageName, mapData.tilemap, mapData.tilesX, mapData.tilesY);
+    game.drawTileMap(mapData.imageName, mapData.tilemap, mapData.tilesX, mapData.tilesY, 0, 0);
     var image = osCanvas.toImage();
     addImageToLibrary(game.images, image, mapData);
   });
@@ -134,10 +134,10 @@ function StartGameEngine(canvas, config, gameLoop) {
     }
   };
 
-  game.drawTileMap = function (imageName, tilemap, tilesX, tilesY) {
+  game.drawTileMap = function (imageName, tilemap, tilesX, tilesY, xTile, yTile) {
     for (var y = 0; y < tilesY; y = y + 1) {
       for (var x = 0; x < tilesX; x = x + 1) {
-        game.drawTileToGrid(imageName, tilemap[y][x], x, y);
+        game.drawTileToGrid(imageName, tilemap[y][x], x + xTile, y + yTile);
       }
     }
   };

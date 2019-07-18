@@ -24,10 +24,6 @@ var treeTilemap = [
   [235, 232, 233, 234],
 ];
 
-var coinsTilemap = [
-  [],
-];
-
 var config = {
   dimensions: {
     tilesX: 20,

@@ -39,6 +39,7 @@ The name can either be an image name directly, or the name of an image map.
 
 Takes the following arguments :-
 * The name of an tile-set image
+* The number of the tile from the set to draw
 * An X position
 * A Y position
 
@@ -49,6 +50,7 @@ The name must be an image with the `'tileset'` type set in the configuration.
 
 Takes the following arguments :-
 * The name of a tile-set
+* The number of the tile from the set to draw
 * An X grid position
 * A Y grid position
 
